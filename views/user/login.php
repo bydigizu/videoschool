@@ -5,6 +5,6 @@
   <div class="panel-body">
       name<br>
       password<br>
-      [Create]
+      [Enter]
   </div>
 </div>
