@@ -11,6 +11,7 @@
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'db' =>require __DIR__ . '/db.php',
         'request' => [
             'cookieValidationKey' => 'z;lbkdz;blkfdv;llkfdkg;zkgf;lkgvjzdf;lvkjzfdd;glkjf'
         ]
