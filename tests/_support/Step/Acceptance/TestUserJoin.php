@@ -6,10 +6,11 @@ class TestUserJoin extends \AcceptanceTester
 
     public function imagineUser()
     {
+        $faker = \Faker\Factory::create();
         $user = [
-            'name' => 'Losyash',
-            'email' => 'los@smesh.sm',
-            'password' => 'klooiim,lj'
+            'name' => $faker->firstName,
+            'email' => $faker->email,
+            'password' => $faker->city
         ];
         return $user;
     }

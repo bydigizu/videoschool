@@ -5,7 +5,8 @@
         "codeception/module-phpbrowser": "^1.0.0",
         "codeception/module-asserts": "^1.0.0",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-debug": "^2.1"
+        "yiisoft/yii2-debug": "^2.1",
+        "fzaninotto/faker": "*"
     },
     "config":{
         "fxp-asset": {
