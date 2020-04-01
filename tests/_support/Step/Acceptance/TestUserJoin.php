@@ -23,7 +23,7 @@ class TestUserJoin extends \AcceptanceTester
         $I->fillField('UserJoinForm[name]', $user['name']);
         $I->fillField('UserJoinForm[email]', $user['email']);
         $I->fillField('UserJoinForm[password]', $user['password']);
-        $I->fillField('UserJoinForm[repeatpassword]', $user['password']);
+        $I->fillField('UserJoinForm[password2]', $user['password']);
         $I->click('Create');
     }
 
