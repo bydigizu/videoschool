@@ -14,6 +14,9 @@
         'db' =>require __DIR__ . '/db.php',
         'request' => [
             'cookieValidationKey' => 'z;lbkdz;blkfdv;llkfdkg;zkgf;lkgvjzdf;lvkjzfdd;glkjf'
+        ],
+        'user'=> [
+            'identityClass' => 'app\models\UserIdentity'
         ]
     ],
     'modules' => [
