@@ -3,7 +3,7 @@
 
 namespace app\controllers;
 
-use app\models\UserIdentity;
+use app\models\UserRecord;
 use app\models\UserJoinForm;
 use Yii;
 use yii\web\Controller;
@@ -12,12 +12,23 @@ class UserController extends Controller
 {
     public function actionJoin()
     {
-//        $userRecord = new UserRecord();
-//        $userRecord->setTestUser();
-//        $userRecord->save();
-        $userJoinForm = new UserJoinForm();
-        return $this->render('join',
+        if(Yii::$app->request->isPost){
+            return $this->actionJoinPost();
+        } else {
+            $userJoinForm = new UserJoinForm();
+            $userRecord = new UserRecord;
+            $userRecord->setTestUser();
+            $userJoinForm->setUserRecord($userRecord);
+            return $this->render('join',
             compact('userJoinForm'));
+        }
+    }
+    
+    public function actionJoinPost()
+    {
+        $userJoinForm = new UserJoinForm();
+        $userJoinForm->load(Yii::$app->request->post());
+        return $this->render('join', compact('userJoinForm'));
     }
     
     public function actionLogin()
