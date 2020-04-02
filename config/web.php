@@ -17,6 +17,9 @@
         ],
         'user'=> [
             'identityClass' => 'app\models\UserIdentity'
+        ],
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
         ]
     ],
     'modules' => [
