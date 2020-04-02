@@ -29,7 +29,7 @@ class UserJoinForm extends Model
     {
         $this->name = $userRecord->name;
         $this->email = $userRecord->email;
-        $this->password = $this->password2 = 'qwerty';
+        $this->password = $this->password2 = $userRecord->passhash;
     }
     
     public function errorIfEmailUsed()
