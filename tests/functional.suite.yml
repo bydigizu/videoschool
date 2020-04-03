@@ -10,4 +10,8 @@ modules:
     enabled:
         # add a framework module here
         - \Helper\Functional
+        - Yii2
+    config:
+        Yii2:
+            configFile: 'config/web.php'
     step_decorators: ~        

@@ -14,5 +14,8 @@
                 "bower-asset-library": "vendor/bower"
             }
         }
+    },
+    "require-dev": {
+        "codeception/module-yii2": "^1.1"
     }
 }

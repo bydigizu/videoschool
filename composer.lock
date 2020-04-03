@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21a4e6960b58ea676d64b23c7cf888d9",
+    "content-hash": "29592e714303c20118f494aa9e76e1bf",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -3811,7 +3811,59 @@
             "time": "2020-01-17T13:40:32+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "codeception/module-yii2",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/module-yii2.git",
+                "reference": "89ec2b34db0fe1c80d404d939ecc7ab07051b4b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/89ec2b34db0fe1c80d404d939ecc7ab07051b4b7",
+                "reference": "89ec2b34db0fe1c80d404d939ecc7ab07051b4b7",
+                "shasum": ""
+            },
+            "require": {
+                "codeception/codeception": "4.0.x-dev | ^4.0",
+                "codeception/lib-innerbrowser": "^1.0",
+                "php": ">=5.6.0 <8.0"
+            },
+            "require-dev": {
+                "codeception/util-robohelpers": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov"
+                },
+                {
+                    "name": "Sam Mouse"
+                },
+                {
+                    "name": "Michael Bodnarchuk"
+                }
+            ],
+            "description": "Codeception module for Yii2 framework",
+            "homepage": "http://codeception.com/",
+            "keywords": [
+                "codeception",
+                "yii2"
+            ],
+            "time": "2020-01-28T12:56:17+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
