@@ -16,7 +16,8 @@
             'cookieValidationKey' => 'z;lbkdz;blkfdv;llkfdkg;zkgf;lkgvjzdf;lvkjzfdd;glkjf'
         ],
         'user'=> [
-            'identityClass' => 'app\models\UserIdentity'
+            'identityClass' => 'app\models\UserIdentity',
+            'enableAutoLogin' => true
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

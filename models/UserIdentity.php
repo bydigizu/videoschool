@@ -11,7 +11,7 @@ class UserIdentity extends UserRecord implements IdentityInterface
     
     public function getAuthKey(): string
     {
-        
+        return $this->authokey;
     }
 
     public function getId()
@@ -21,7 +21,7 @@ class UserIdentity extends UserRecord implements IdentityInterface
 
     public function validateAuthKey($authKey): bool
     {
-        
+        return $this->getAuthKey() === $authKey;
     }
 
     public static function findIdentity($id)

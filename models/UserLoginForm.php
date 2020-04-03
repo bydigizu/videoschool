@@ -10,6 +10,8 @@ class UserLoginForm extends Model
     
     public $email;
     public $password;
+    public $remember;
+    
     private $userRecord;
 
 
@@ -18,6 +20,7 @@ class UserLoginForm extends Model
         return[
             ['email', 'required'],
             ['password', 'required'],
+            ['remember', 'boolean'],
             ['email', 'errorIfEmailNotFoud'],
             ['password','errorIfPasswordWrong']
         ];
@@ -47,7 +50,8 @@ class UserLoginForm extends Model
             return;
         }
         $userIdentity = UserIdentity::findIdentity($this->userRecord->id);
-        Yii::$app->user->login($userIdentity);
+        Yii::$app->user->login($userIdentity,
+                $this->remember ? 3600 * 24 * 30 : 0);
     }
 
 }

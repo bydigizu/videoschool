@@ -12,6 +12,7 @@ use yii\widgets\ActiveForm;
       <?php $form = ActiveForm::begin(['id' =>'user-login-form']); ?>
         <?= $form ->field($userLoginForm, 'email')?>
         <?= $form ->field($userLoginForm, 'password')->passwordInput()?>
+        <?= $form ->field($userLoginForm, 'remember')->checkbox()?>
         <?= Html::submitButton('Enter',
                 ['class' => 'btn btn-primary']) ?>
       <?php ActiveForm::end(); ?>
