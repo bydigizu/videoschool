@@ -16,7 +16,7 @@ class UserRecord extends ActiveRecord
         
         $this->name = $faker->name;
         $this->email = $faker->freeEmail;
-        $this->passhash = $faker->password;
+        $this->setPassword($faker->password);
         $this->status = $faker->randomDigit;
     }
     
@@ -35,9 +35,13 @@ class UserRecord extends ActiveRecord
     {
         $this->name = $userJoinForm->name;
         $this->email = $userJoinForm->email;
-        $this->passhash = $userJoinForm->password;
+        $this->setPassword($userJoinForm->password);
         $this->status = 1;
-        
+    }
+    
+    public function setPassword($password)
+    {
+        $this->passhash = $password;
     }
 
 }
